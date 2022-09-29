@@ -10,4 +10,10 @@ class TasksController < ApplicationController
     Task.create(title: params[:title])
     redirect_to "/tasks"
   end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to "/tasks"
+  end
 end
