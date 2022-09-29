@@ -1,2 +1,6 @@
 <h2>TO DO APP</h2>
 <%= link_to "CREATE NEW TASK", "/tasks/new" %>
+<h2> [TASK LIST] </h2>
+<% @tasks.each do |task| %>
+  <p>・<%= task.title %></p>
+<% end %>
